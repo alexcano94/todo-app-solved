@@ -4,7 +4,7 @@ import { editTodo } from '../../utils/api';
 import { useState } from 'react';
 import EditTodo from '../EditTodo/EditTodo';
 
-const Todo = ({ id, text, date, done }) => {
+const Todo = ({ id, text, date, done, removeTodo }) => {
   const [completed, setCompleted] = useState(done);
   const [edit, setEdit] = useState(false);
   const [todo, setTodo] = useState({ id, text, date, done });
@@ -43,6 +43,16 @@ const Todo = ({ id, text, date, done }) => {
     )
   }
 
+  const DeleteTodoButton = () => {
+    return (
+      <div>
+        <button onClick={() => removeTodo({ id })} className={styles.deleteTodo}>
+          X
+        </button>
+      </div>
+    )
+  }
+  
   return (edit && !completed) ? (<EditTodo id={id} setEdit={setEdit} updateTodo={setTodo} />)
     : (< div className={styles.todo} >
       <div className={styles.todoTitle}>
@@ -56,6 +66,9 @@ const Todo = ({ id, text, date, done }) => {
         <p className={styles.text} >
           <Text text={todo.text} done={completed} />
         </p>
+      </div>
+      <div className={styles.todoActions}>
+        <DeleteTodoButton />
       </div>
     </div >)
 }

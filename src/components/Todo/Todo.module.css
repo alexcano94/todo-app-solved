@@ -48,3 +48,23 @@
   font-size: small;
   margin-right: 1em;
 }
+
+.deleteTodo {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(186, 62, 62);
+  border: none;
+  background-color: inherit;
+  text-decoration-line: underline;
+  cursor: pointer;
+  font-size: small;
+  margin-right: 1em;
+}
+
+.todoActions {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -2,10 +2,9 @@ import styles from './App.module.css';
 import { useState, useEffect } from 'react';
 import Todo from './components/Todo/Todo';
 import CreateTodo from './components/CreateTodo/CreateTodo';
-import { getAllTodos, createTodo } from './utils/api';
+import { getAllTodos, createTodo, deleteTodo } from './utils/api';
 
 function App() {
-
   const [todos, setTodos] = useState([])
   const [creating, setCreating] = useState(false);
 
@@ -26,6 +25,11 @@ function App() {
     setCreating(false);
   }
 
+  const removeTodo = async ({ id }) => {
+    await deleteTodo({ id });
+    fetchData();
+  }
+  
   const NewTodoButton = ({ setCreating }) => {
     return (
       <div>
@@ -48,8 +52,8 @@ function App() {
           text={text}
           date={fecha}
           done={done}
+          removeTodo={removeTodo}
         />)}
-
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { createTodo, getTodo } from "../../utils/api";
 import styles from "./CreateTodo.module.css"
 
 const CreateTodo = ({ createTodo, setCreating }) => {

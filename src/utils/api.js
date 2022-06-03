@@ -28,16 +28,21 @@ const editTodo = ({ id, data }) => {
 }
 
 const getAllTodos = async () => {
-  return fetch(`${API}/todo`).then(response => response.json());
+  return fetch(`${API}/todo`).then(response => response.json()).then(todos => todos.map(todo => ({ ...todo, id: todo._id })));
 }
 
 const getTodo = ({ id }) => {
   return fetch(`${API}/todo/${id}`).then(response => response.json());
 }
 
+const deleteTodo = ({ id }) => {
+  return fetch(`${API}/todo/${id}`, { method: 'DELETE' });
+}
+
 export {
   createTodo,
   editTodo,
   getAllTodos,
-  getTodo
+  getTodo,
+  deleteTodo,
 }
