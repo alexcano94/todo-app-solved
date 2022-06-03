@@ -1,0 +1,50 @@
+.todo {
+  margin: 4em;
+  padding: 2em;
+  width: 12em;
+  height: 12em;
+  border-radius: 21px;
+  background: #c2cbd1;
+  box-shadow: 13px 13px 26px #a5adb2,
+    -13px -13px 26px #dfe9f0;
+}
+
+.text {
+  font-family: 'Nunito', sans-serif;
+  font-size: large;
+  word-break: break-all;
+}
+
+.dueDate {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.todoBody {
+  display: flex;
+  margin-top: 2em;
+  align-items: center;
+}
+
+.todoTitle {
+  margin-top: -1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editTodo {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: gray;
+  border: none;
+  background-color: inherit;
+  text-decoration-line: underline;
+  cursor: pointer;
+  font-size: small;
+  margin-right: 1em;
+}

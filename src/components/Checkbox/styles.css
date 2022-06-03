@@ -1,0 +1,22 @@
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox {
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
+  background: #fff;
+  margin-right: 4px;
+  border-radius: 2px;
+  background: linear-gradient(145deg, #afb7bc, #d0d9e0);
+  box-shadow: 13px 13px 26px #a5adb2,
+    -13px -13px 26px #dfe9f0;
+  margin: 1em;
+}
